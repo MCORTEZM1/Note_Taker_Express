@@ -48,7 +48,7 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  })
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -93,6 +93,11 @@ const handleNoteDelete = (e) => {
     getAndRenderNotes();
     renderActiveNote();
   });
+
+  if(deleteNote){
+    window.location.reload();
+  }
+  
 };
 
 // Sets the activeNote and displays it
@@ -147,6 +152,8 @@ const renderNoteList = async (notes) => {
         'delete-note'
       );
       delBtnEl.addEventListener('click', handleNoteDelete);
+      
+
 
       liEl.append(delBtnEl);
     }
