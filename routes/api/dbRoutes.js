@@ -33,7 +33,6 @@ router.delete('/notes/:id', (req, res) => {
     // console.log(reproducedArray);
 
     fs.writeFileSync('data/notes.json', JSON.stringify(reproducedArray, null, 2))
-
 });
 
 
