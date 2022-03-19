@@ -1,22 +1,19 @@
-[
-  {
-    "title": "asdfa",
-    "text": "sdfasdfadf",
-    "id": "bf618254-a276-4a6c-8911-b1fb4ee8b359"
-  },
-  {
-    "title": "asdfasd",
-    "text": "fasdfasdf",
-    "id": "633203ad-7084-46ee-8da2-e5d6fecdaf32"
-  },
-  {
-    "title": "asdfasdf",
-    "text": "asdfasdf",
-    "id": "4bb70b68-87c9-45a3-acfb-1f01200a5fe0"
-  },
-  {
-    "title": "werwe",
-    "text": "rwerwer",
-    "id": "533774fc-262a-4e51-8879-600af004f573"
-  }
-]
+{
+  "notes": [
+    {
+      "title": "test",
+      "text": "test",
+      "id": "4f366a17-eebd-41ec-bf3f-251b828a4f3c"
+    },
+    {
+      "title": "testtes",
+      "text": "test",
+      "id": "cf9d252f-3097-4b6a-89cf-8e6350fb2bf2"
+    },
+    {
+      "title": "test",
+      "text": "test",
+      "id": "9968924f-d6bb-4092-80c5-37d6f3e89da3"
+    }
+  ]
+}

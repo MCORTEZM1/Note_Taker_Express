@@ -1,13 +1,11 @@
 const router = require('express').Router(); 
 const fs = require('fs');
-const notes = require('../../data/notes'); 
+const { notes }  = require('../../data/notes'); 
 const { v4: uuid4 } = require('uuid');
-const { createNewNote, validatePost, readFile } = require('../../lib/notes');
+const { createNewNote, validatePost, deleteNote } = require('../../lib/notes');
 
 router.get('/notes', (req, res) => {
     let results = notes; 
-    req.body.id = notes.length.toString();
-
     res.json(results);
 });
 
@@ -25,17 +23,8 @@ router.post('/notes', (req, res) => {
 });
 
 router.delete('/notes/:id', (req, res) => {
-    const notesId = req.params.id; 
-    
-    readFile('./data/notes.json')
-        .then(() => {
-            const reproducedArray =  notes.filter((item) => item.id !== notesId);
-            return reproducedArray;
-        })
-        .then((newData) => {
-            fs.writeFileSync('data/notes.json', JSON.stringify(newData, null, 2));
-        });
-        
+    deleteNote(notes, req.params.id);
+    res.json(notes)
 });
 
 
