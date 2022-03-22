@@ -1,12 +1,9 @@
-[
-  {
-    "title": "12",
-    "text": "12",
-    "id": "d008883d-3030-4bae-8f93-b744adf61d48"
-  },
-  {
-    "title": "22",
-    "text": "22",
-    "id": "0fce433b-5238-4a36-a11d-6467e63f4ae3"
-  }
-]
+{
+  "notes": [
+    {
+      "title": "test",
+      "text": "test",
+      "id": "c562f741-57bd-48b0-a3b5-7bd85b2dadd0"
+    }
+  ]
+}

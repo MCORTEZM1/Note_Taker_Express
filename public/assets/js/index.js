@@ -48,7 +48,7 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  })
+  });
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -93,11 +93,8 @@ const handleNoteDelete = (e) => {
     getAndRenderNotes();
     renderActiveNote();
   });
-
-  if (deleteNote) {
-    window.location.reload();
-  }
-
+  window.location.reload();
+ 
 };
 
 // Sets the activeNote and displays it

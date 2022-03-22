@@ -1,6 +1,6 @@
 const fs = require('fs');
-const { createNewNote, validatePost } = require('../lib/notes')
-const notes = require('../data/notes');
+const { createNewNote, validatePost, deleteNote } = require('../lib/notes')
+const {notes} = require('../data/notes');
 jest.mock('fs');
 
 test('creates new note object', () => {
@@ -28,3 +28,20 @@ test('validates note input', () => {
     expect(validResult).toBe(true);
     expect(invalidResult).toBe(false);
 });
+
+test('delete note by ID', () => {
+    const list = [
+        {
+            id: "11"
+        },
+        {
+            id: "12"
+        },
+        {
+            id:'22'
+        }
+    ];
+
+    deleteNote(list, "11");
+    expect(list.length - 1 ).toEqual(1);
+})
