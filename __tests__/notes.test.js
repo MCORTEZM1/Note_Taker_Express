@@ -32,13 +32,16 @@ test('validates note input', () => {
 test('delete note by ID', () => {
     const list = [
         {
-            id: "1asd1"
+            id: "11"
         },
         {
-            id: "2sedf1"
+            id: "12"
+        },
+        {
+            id:'22'
         }
     ];
 
-    deleteNote(list, "1asd1");
-    expect(list.length).toEqual(1);
+    deleteNote(list, "11");
+    expect(list.length - 1 ).toEqual(1);
 })
